@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1620247984/camera_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.3.1622680678/control_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1620248257/drawing_utils.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh@0.3.1620248508/face_mesh.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script defer src="script.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <b>Upload image</b>
+      <input
+        type="file"
+        accept="image/gif, image/jpeg, image/png"
+        id="imageInput"
+      />
+    </div>
+    <form>
+      <b>Select earring</b>
+      <select id="imageList">
+        <option disabled>Select image</option>
+      </select>
+    </form>
+
+    <form>
+      <b>Earring height in mm</b>
+      <input type="text" id="earringHeight" value="30" />
+    </form>
+
+    <div class="container">
+      <video class="input_video"></video>
+      <canvas class="output_canvas"></canvas>
+    </div>
+    <div class="loading">
+      <div class="spinner"></div>
+    </div>
+  </body>
+</html>
